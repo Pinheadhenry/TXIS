@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "607131724212",
+    "project_id": "texas-iron-spikes",
+    "storage_bucket": "texas-iron-spikes.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607131724212:android:51465a5460870304ca6ae1",
+        "android_client_info": {
+          "package_name": "com.example.texas_iron_spikes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1DbiqDeqJj4g5BCQY3fPO5RMv7iKe5vc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
