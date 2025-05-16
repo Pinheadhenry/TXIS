@@ -3,14 +3,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 
-class MyCustomForm extends StatefulWidget {
-  const MyCustomForm({super.key});
+class MyServiceForm extends StatefulWidget {
+  const MyServiceForm({super.key});
 
   @override
-  MyCustomFormState createState() => MyCustomFormState();
+  MyServiceFormState createState() => MyServiceFormState();
 }
 
-class MyCustomFormState extends State<MyCustomForm> {
+class MyServiceFormState extends State<MyServiceForm> {
   final _formKey = GlobalKey<FormState>();
 
   final TextEditingController _activeNameController = TextEditingController();
@@ -63,7 +63,7 @@ class MyCustomFormState extends State<MyCustomForm> {
       'hours': num.tryParse(_hoursController.text.trim()) ?? 0,
       'date': _dateController.text.trim(),
       'timestamp': FieldValue.serverTimestamp(),
-      'type': 'spirit'
+      'type': 'service'
     });
 
     ScaffoldMessenger.of(context).showSnackBar(

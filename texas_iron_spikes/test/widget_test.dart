@@ -7,8 +7,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:texas_iron_spikes/main.dart';
 import 'package:texas_iron_spikes/app.dart';
 
 void main() {

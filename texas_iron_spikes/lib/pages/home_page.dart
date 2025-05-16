@@ -1,13 +1,12 @@
-import 'package:english_words/english_words.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:texas_iron_spikes/firebase_options.dart';
+import 'package:texas_iron_spikes/pages/add_member_form.dart';
 import 'generator_page.dart';
 import 'events_page.dart';
 import 'hours_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:texas_iron_spikes/pages/actives_list_page.dart';
+import 'package:texas_iron_spikes/pages/review_page.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -53,11 +52,33 @@ class _MyHomePageState extends State<MyHomePage> {
           case 1:
             page = EventsPage();
             break;
+          case 2:
+            page = const Placeholder();
+            break;
           case 3:
             page = HoursForms();
             break;
+          case 4:
+            page = const Placeholder();
+            break;
+          case 5:
+            page = const Placeholder();
+            break;
+          case 6:
+            page = const ActivesListPage();            
+            break;
+          case 7:
+            page = const RequestReviewPage();
+            break;
+          case 8:
+            page = const AddMemberForm();
+            break;
           default:
             page = const Placeholder();
+        }
+
+        if (selectedIndex >= (isAdmin ? 9 : 6)) {
+          selectedIndex = 0; // or any default safe index
         }
 
         return Scaffold(
@@ -97,6 +118,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 const NavigationDestination(
                   icon: Icon(Icons.safety_check),
                   label: 'Requests',
+                ),
+              if (isAdmin)
+                const NavigationDestination(
+                  icon: Icon(Icons.safety_check),
+                  label: 'Add Member',
                 ),
             ],
             selectedIndex: selectedIndex,

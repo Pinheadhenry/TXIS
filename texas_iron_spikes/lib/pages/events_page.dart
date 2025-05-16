@@ -1,9 +1,5 @@
-import 'package:english_words/english_words.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:texas_iron_spikes/firebase_options.dart';
 
 
 class EventsPage extends StatelessWidget {
